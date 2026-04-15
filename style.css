@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fde2e4, #e0c3fc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4a2c3a;
+}
+
+.container {
+  width: 90%;
+  max-width: 430px;
+}
+
+.card {
+  display: none;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 28px;
+  border-radius: 22px;
+  text-align: center;
+  animation: fadeIn 1.2s ease;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+}
+
+.card.active {
+  display: block;
+}
+
+h1, h2 {
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+button {
+  background: #ffafcc;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: #ffc8dd;
+}
+
+.map {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+.line {
+  width: 90px;
+  height: 2px;
+  background: #ff7aa2;
+  margin: 0 12px;
+  position: relative;
+}
+
+.line::after {
+  content: "❤️";
+  position: absolute;
+  left: 50%;
+  top: -10px;
+  transform: translateX(-50%);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.small {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.final {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.ending {
+  font-style: italic;
+  margin-top: 15px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
